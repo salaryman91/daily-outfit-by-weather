@@ -1,0 +1,37 @@
+{
+  "name": "daily-outfit-by-weather",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "forecast": "tsc && node dist/fetch/getForecast.js",
+    "realtime": "tsc && node dist/fetch/getRealtimeWeather.js",
+    "generate:weather": "tsc && node dist/data/generateWeatherData.js",
+    "build": "tsc",
+    "daily": "npm run forecast && npm run realtime && npm run generate:weather"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salaryman91/daily-outfit-by-weather.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salaryman91/daily-outfit-by-weather/issues"
+  },
+  "homepage": "https://github.com/salaryman91/daily-outfit-by-weather#readme",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "@types/node-fetch": "^2.6.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
